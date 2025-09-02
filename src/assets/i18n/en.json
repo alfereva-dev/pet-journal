@@ -1,0 +1,41 @@
+{
+  "NAVIGATION": {
+    "pets": "Pets",
+    "contacts": "Contacts",
+    "documents": "Documents",
+    "habitats": "Habitats",
+    "events": "Events",
+    "reminders": "Reminders"
+  },
+  "PET_INFO": {
+    "name": "Name",
+    "birthday": "Birthday",
+    "date_of_death": "Date of death",
+    "gender": "Gender",
+    "age": "Age",
+    "passport": "Passport",
+    "chip": "Chip",
+    "physical_info": "Physical information",
+    "species": "Species",
+    "breed": "Breed",
+    "feeding": "Feeding",
+    "treatment": "Treatment",
+    "grooming": "Grooming",
+    "insurance": "Insurance",
+    "vaccination": "Vaccination",
+    "measurement": "Measurement",
+    "habitat": "Habitat",
+    "vet": "Vet contact",
+    "groomer": "Groomer contact",
+    "contacts": "Vet & Groomer contacts",
+    "events": "Events",
+    "reminders": "Reminders",
+    "documents": "Documents",
+    "status": "Status",
+    "note": "Note",
+    "unknown": "Unknown",
+    "emergency_contacts": "Emergency contacts",
+    "pet_identification": "Pet Identification",
+    "not_specified": "Information is not specified"
+  }
+}

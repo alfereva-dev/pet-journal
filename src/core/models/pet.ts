@@ -1,0 +1,48 @@
+import type { PetType } from "../types/pet-type.ts";
+import type { PetGender } from "../types/pet-gender.ts";
+import type { PetStatus } from "../types/pet-status.ts";
+import type { Insurance } from "./insurance.ts";
+import type { VetContact } from "./vet-contact.ts";
+import type { Feeding } from "./feeding.ts";
+import type { Treatment } from "./treatment.ts";
+import type { Reminder } from "./reminder.ts";
+import type { Grooming } from "./grooming.ts";
+import type { Event } from "./event.ts";
+import type { Document } from "./document.ts";
+import type { GroomerContact } from "./groomer-contact.ts";
+import type { Vaccination } from "./vaccination.ts";
+import type { Measurement } from "./measurement.ts";
+import type { Habitat } from "./habitat.ts";
+import type { PhysicalCharacteristic } from "./physical-characteristic.ts";
+import type { Note } from "./note.ts";
+
+export interface Pet {
+  id: string;
+  userId: string;
+  name: string;
+  birthday: string;
+  dateOfDeath?: string;
+  gender: PetGender;
+  passport?: string;
+  chip?: string;
+  age?: number;
+  physicalCharacteristics?: PhysicalCharacteristic[];
+  type: PetType;
+  species?: string;
+  breed?: string;
+  feedings?: Feeding[];
+  treatments?: Treatment[];
+  grooming?: Grooming[];
+  insurances?: Insurance[];
+  vaccination?: Vaccination[];
+  measurements?: Measurement[];
+  habitats?: Habitat[];
+  vets?: VetContact[];
+  groomers?: GroomerContact[];
+  events?: Event[];
+  reminders?: Reminder[];
+  documents?: Document[];
+  status: PetStatus;
+  photo?: string;
+  note?: Note[];
+}
