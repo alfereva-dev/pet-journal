@@ -10,7 +10,7 @@ type Props = {
   type: PetType;
   birthday: string;
   gender: PetGender;
-  age: number;
+  age: string;
   breed?: string;
   photo?: string;
 };

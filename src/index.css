@@ -1,5 +1,6 @@
 html, body, #root {
   height: 100%;
+  width: 100%;
   margin: 0;
 }
 
@@ -21,9 +22,9 @@ html, body, #root {
 
   --primary-color: #A4B465;
   --secondary-color: #2E3D20;
-  --text-color: #D5E6B2;
+  --text-color: #ebf7d4;
   --shadow-1: 10px 10px 2px rgb(0 0 0 / 20%), -10px 10px 2px rgb(0 0 0 / 20%);
-  --shadow-2: 0 2px 6px rgba(0,0,0,.20), 0 1px 2px rgba(0,0,0,.12);
+  --shadow-2: 10px 0 5px rgb(0 0 0 / 25%);
   --shadow-3: 0 8px 24px rgba(0,0,0,.25), 0 2px 8px rgba(0,0,0,.18);
   --shadow-4: 0 16px 40px rgba(0,0,0,.30), 0 6px 16px rgba(0,0,0,.22);
 }
@@ -31,8 +32,10 @@ html, body, #root {
 section, main {
   height: 100%;
   width: 100%;
-  padding: 1rem;
+  padding: 20px;
   box-sizing: border-box;
+  overflow: auto;
+  scrollbar-width: none;
 }
 
 a{

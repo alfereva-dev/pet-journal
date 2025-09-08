@@ -13,14 +13,24 @@
   gap: 25px;
 }
 
+.flex-column{
+  flex-direction: column;
+}
+
 .width-100{
   width: 100%;
+}
+
+.nav-desktop-box{
+  display: flex;
+  height: 100%;
+  box-shadow: var(--shadow-2);
 }
 
 .pets-page{
   display: flex;
   width: auto;
-  align-items: center;
+  align-items: stretch;
   flex-direction: column;
   gap: 20px;
 }
@@ -121,7 +131,7 @@
   box-shadow: var(--shadow-1);
 }
 
-#pet-details{
+.scroll-page{
   height: 100%;
   overflow-x: auto;
   scrollbar-width: none;
@@ -133,6 +143,7 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  width: 100%;
 }
 
 .pet-details-mini-box{

@@ -5,4 +5,6 @@ export enum DocumentType {
   PEDIGREE = "Pedigree",
   INSURANCE = "Insurance",
   OTHER = "Other",
+  VET = "Vet",
+  SERVICE_BILL = "Service bill",
 }

@@ -35,6 +35,9 @@
     "note": "Note",
     "unknown": "Unknown",
     "emergency_contacts": "Emergency contacts",
+    "all_vet_contacts": "All vet contacts",
+    "all_groomer_contacts": "All groomer contacts",
+    "all_other_contacts": "All other contacts",
     "pet_identification": "Pet Identification",
     "not_specified": "Information is not specified"
   }

@@ -3,6 +3,7 @@ import type { GroomingType } from "../types/grooming-type.ts";
 
 export interface GroomerContact {
   id: string;
+  petId: string;
   contactType: GroomerContactType;
   groomingType: GroomingType;
   name?: string;
@@ -11,5 +12,4 @@ export interface GroomerContact {
   website?: string;
   address?: string;
   note?: string;
-  emergency?: boolean;
 }

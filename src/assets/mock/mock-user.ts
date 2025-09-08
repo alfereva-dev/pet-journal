@@ -102,6 +102,7 @@ export const mockUser: User = {
       vets: [
         {
           id: "vet1",
+          petId: "p1",
           type: VetContactType.VET,
           name: "VetClinic",
           telephone: "+420XXXXXXXXX",
@@ -112,6 +113,7 @@ export const mockUser: User = {
       groomers: [
         {
           id: "g1",
+          petId: "p1",
           contactType: GroomerContactType.SALON,
           groomingType: GroomingType.FUR,
           name: "Salon",
@@ -119,6 +121,15 @@ export const mockUser: User = {
           email: "grooming.salon@mail.com",
           website: "www.salon.com",
           address: "Praha",
+        },
+      ],
+      otherContacts: [
+        {
+          id: "othc1",
+          petId: "p1",
+          name: "Trainer Luka",
+          telephone: "+420XXXXXXXXX",
+          email: "trainer.luka@mail.com",
         },
       ],
       insurances: [
@@ -171,6 +182,27 @@ export const mockUser: User = {
           amount: 20,
           unit: MassUnit.G,
           frequency: Frequency.DAILY,
+        },
+      ],
+      vets: [
+        {
+          id: "vet2",
+          petId: "p2",
+          type: VetContactType.VET,
+          name: "BirdVetClinic",
+          telephone: "+420XXXXXXXXX",
+          email: "vet@gmail.com",
+          emergency: true,
+        },
+        {
+          id: "vet3",
+          petId: "p2",
+          type: VetContactType.VET,
+          name: "BirdVetClinic - Praha",
+          telephone: "+420XXXXXXXXX",
+          email: "vet@gmail.com",
+          address: "Praha",
+          emergency: false,
         },
       ],
       treatments: [

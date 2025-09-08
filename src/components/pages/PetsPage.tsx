@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { Pet } from "../../core/models/pet.ts";
 import { getPets } from "../../core/services/pet.service.ts";
 import { PreviewPetDetails } from "../ui/PreviewPetDetails.tsx";
+import { formatAgeLabel, formatDateDMY } from "../../features/utils/date.ts";
 
 export function PetsPage() {
   const [pets, setPets] = useState<Pet[]>([]);
@@ -17,9 +18,9 @@ export function PetsPage() {
           petId={p.id}
           name={p.name}
           type={p.type}
-          birthday={p.birthday ?? ""}
+          birthday={formatDateDMY(p?.birthday)}
           gender={p.gender}
-          age={p.age ?? 0}
+          age={formatAgeLabel(p?.birthday, p?.dateOfDeath)}
         />
       ))}
     </div>

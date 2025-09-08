@@ -6,6 +6,7 @@ import { getPet } from "../../core/services/pet.service";
 import { PetTypeIconMap } from "../../assets/icons/pet-type/map";
 import { PetType } from "../../core/types/pet-type";
 import { Infobox } from "./Infobox";
+import { formatAgeLabel, formatDateDMY } from "../../features/utils/date.ts";
 
 const val = (id: string, content?: ReactNode | null) =>
   content === undefined || content === null || content === ""
@@ -38,7 +39,7 @@ export function PetDetails() {
   }
 
   return (
-    <div id="pet-details" className="primary-box shadow-1">
+    <div id="pet-details" className="primary-box shadow-1 scroll-page">
       <div className="pet-details-page">
         <div className="pet-details-mini-box">
           <div className="avatar primary-box" aria-hidden>
@@ -72,9 +73,9 @@ export function PetDetails() {
                 {
                   id: "base-birthday",
                   label: "PET_INFO.birthday",
-                  value: [val("base-birthday-v", pet?.birthday)].filter(
-                    notNull,
-                  ),
+                  value: [
+                    val("base-birthday-v", formatDateDMY(pet?.birthday)),
+                  ].filter(notNull),
                 },
                 {
                   id: "base-gender",
@@ -84,9 +85,12 @@ export function PetDetails() {
                 {
                   id: "base-age",
                   label: "PET_INFO.age",
-                  value: [val("base-age-v", pet?.age?.toString())].filter(
-                    notNull,
-                  ),
+                  value: [
+                    val(
+                      "base-age-v",
+                      formatAgeLabel(pet?.birthday, pet?.dateOfDeath),
+                    ),
+                  ].filter(notNull),
                 },
                 {
                   id: "base-status",
@@ -149,7 +153,7 @@ export function PetDetails() {
                   showCopy: true,
                 })) ?? [
                 {
-                  id: "not_specified",
+                  id: "none",
                   label: "PET_INFO.not_specified",
                   value: [],
                 },
@@ -188,7 +192,7 @@ export function PetDetails() {
                 showCopy: true,
               })) ?? [
                 {
-                  id: "not_specified",
+                  id: "none",
                   label: "PET_INFO.not_specified",
                   value: [],
                 },
@@ -210,7 +214,7 @@ export function PetDetails() {
                 ].filter(notNull),
               })) ?? [
                 {
-                  id: "not_specified",
+                  id: "none",
                   label: "PET_INFO.not_specified",
                   value: [],
                 },
@@ -228,11 +232,14 @@ export function PetDetails() {
                 value: [
                   val(`f-${t.id}-type`, t.type),
                   val(`f-${t.id}-dosage`, t.dosage),
-                  val(`f-${t.id}-date`, `${t.startDate}-${t.endDate ?? ""}`),
+                  val(
+                    `f-${t.id}-date`,
+                    `${formatDateDMY(t.startDate)}-${formatDateDMY(t.endDate) ?? ""}`,
+                  ),
                 ].filter(notNull),
               })) ?? [
                 {
-                  id: "not_specified",
+                  id: "none",
                   label: "PET_INFO.not_specified",
                   value: [],
                 },
@@ -250,11 +257,11 @@ export function PetDetails() {
                 value: [
                   val(`f-${v.id}-batch`, v.batchNumber),
                   val(`f-${v.id}-performed`, v.performedBy),
-                  val(`f-${v.id}-date`, v.nextDueDate),
+                  val(`f-${v.id}-date`, formatDateDMY(v.nextDueDate)),
                 ].filter(notNull),
               })) ?? [
                 {
-                  id: "not_specified",
+                  id: "none",
                   label: "PET_INFO.not_specified",
                   value: [],
                 },
@@ -271,12 +278,12 @@ export function PetDetails() {
                 label: m.type,
                 value: [
                   val(`f-${m.id}-value`, `${m.value}${m.unit}`),
-                  val(`f-${m.id}-date`, m.date),
+                  val(`f-${m.id}-date`, formatDateDMY(m.date)),
                   val(`f-${m.id}-note`, m.note),
                 ].filter(notNull),
               })) ?? [
                 {
-                  id: "not_specified",
+                  id: "none",
                   label: "PET_INFO.not_specified",
                   value: [],
                 },
@@ -302,7 +309,7 @@ export function PetDetails() {
                 ].filter(notNull),
               })) ?? [
                 {
-                  id: "not_specified",
+                  id: "none",
                   label: "PET_INFO.not_specified",
                   value: [],
                 },
@@ -320,7 +327,7 @@ export function PetDetails() {
                 value: [
                   val(`f-${e.id}-description`, e.description),
                   val(`f-${e.id}-type`, e.type),
-                  val(`f-${e.id}-date`, e.date),
+                  val(`f-${e.id}-date`, formatDateDMY(e.date)),
                   val(`f-${e.id}-durationMinutes`, e.durationMinutes),
                   val(`f-${e.id}-location`, e.location),
                   val(`f-${e.id}-address`, e.address),
@@ -329,7 +336,7 @@ export function PetDetails() {
                 ].filter(notNull),
               })) ?? [
                 {
-                  id: "not_specified",
+                  id: "none",
                   label: "PET_INFO.not_specified",
                   value: [],
                 },
@@ -358,7 +365,7 @@ export function PetDetails() {
                 ].filter(notNull),
               })) ?? [
                 {
-                  id: "not_specified",
+                  id: "none",
                   label: "PET_INFO.not_specified",
                   value: [],
                 },
@@ -382,7 +389,7 @@ export function PetDetails() {
                 ].filter(notNull),
               })) ?? [
                 {
-                  id: "not_specified",
+                  id: "none",
                   label: "PET_INFO.not_specified",
                   value: [],
                 },
@@ -400,7 +407,7 @@ export function PetDetails() {
                 value: [val(`f-${n.id}-number`, n.description)].filter(notNull),
               })) ?? [
                 {
-                  id: "not_specified",
+                  id: "none",
                   label: "PET_INFO.not_specified",
                   value: [],
                 },

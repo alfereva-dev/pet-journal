@@ -30,6 +30,7 @@ type Props = {
   showCopy?: boolean;
   showAction?: boolean;
   className?: string;
+  classNameInfobox?: string;
 };
 
 export function Infobox({
@@ -38,6 +39,7 @@ export function Infobox({
   showCopy = true,
   showAction = false,
   className,
+  classNameInfobox,
 }: Readonly<Props>) {
   const { t } = useTranslation(undefined);
   const [isOpen, setIsOpen] = useState(true);
@@ -46,7 +48,10 @@ export function Infobox({
   const toggle = () => setIsOpen((v) => !v);
 
   return (
-    <div id={"infobox"} className={`primary-box infobox ${className}`}>
+    <div
+      id={"infobox"}
+      className={`primary-box infobox ${className} ${classNameInfobox}`}
+    >
       {title && (
         <div className={"infobox-header"}>
           <div className="infobox-title">{t(title)}</div>

@@ -15,6 +15,7 @@ import type { Measurement } from "./measurement.ts";
 import type { Habitat } from "./habitat.ts";
 import type { PhysicalCharacteristic } from "./physical-characteristic.ts";
 import type { Note } from "./note.ts";
+import type { OtherContact } from "./other-contact.ts";
 
 export interface Pet {
   id: string;
@@ -25,7 +26,6 @@ export interface Pet {
   gender: PetGender;
   passport?: string;
   chip?: string;
-  age?: number;
   physicalCharacteristics?: PhysicalCharacteristic[];
   type: PetType;
   species?: string;
@@ -39,6 +39,7 @@ export interface Pet {
   habitats?: Habitat[];
   vets?: VetContact[];
   groomers?: GroomerContact[];
+  otherContacts?: OtherContact[];
   events?: Event[];
   reminders?: Reminder[];
   documents?: Document[];

@@ -2,6 +2,7 @@ import type { VetContactType } from "../types/vet-contact-type.ts";
 
 export interface VetContact {
   id: string;
+  petId: string;
   type?: VetContactType;
   name: string;
   telephone?: string;
