@@ -1,0 +1,15 @@
+export enum GroomingType {
+  HAIR = "Hair",
+  FUR = "Fur",
+  CLAWS = "Claws",
+  NAILS = "Nails",
+  TEETH = "Teeth",
+  EARS = "Ears",
+  EYES = "Eyes",
+  SKIN = "Skin",
+  SCALES = "Scales",
+  SHELL = "Shell",
+  FEATHERS = "Feathers",
+  BEAK = "Beak",
+  HOOF = "Hoof",
+}

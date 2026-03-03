@@ -1,0 +1,34 @@
+{
+  "NAVIGATION": {
+    "pets": "Mazlíčci",
+    "contacts": "Kontakty",
+    "documents": "Dokumenty",
+    "habitats": "Prostředí",
+    "events": "Události",
+    "reminders": "Připomínky"
+  },
+  "PET_INFO": {
+    "name": "Jméno",
+    "birthday": "Datum narození",
+    "date_of_death": "Datum úmrtí",
+    "gender": "Pohlaví",
+    "passport": "Pas",
+    "chip": "Čip",
+    "physical_info": "Fyzické informace",
+    "species": "Druh",
+    "breed": "Plemeno",
+    "feeding": "Krmení",
+    "treatment": "Léčba",
+    "grooming": "Péče",
+    "insurances": "Pojištění",
+    "vaccination": "Očkování",
+    "measurement": "Měření",
+    "habitat": "Prostředí",
+    "vet": "Veterinář",
+    "groomer": "Ošetřovatel",
+    "events": "Události",
+    "reminders": "Připomínky",
+    "documents": "Dokumenty",
+    "status": "Stav"
+  }
+}
